@@ -9,31 +9,7 @@
 <body>
 <!-- Navbar Section -->
 
-<nav class="navbar">
-    <div class="navbar__container">
-        <img  src="assets/logo2.jpg"  alt="Your Logo">
-        <a href="#home" id="navbar__logo">Shengjini apartments</a>
-        <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span> <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="#home" class="navbar__links" id="home-page">Home</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#about" class="navbar__links" id="about-page">About us</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#services" class="navbar__links" id="services-page">Apartments</a>
-            </li>
-            <li class="navbar__btn">
-                <a href="#sign-up" class="button" id="signup">Sign Up</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
+<?php include 'includes/navbar.php';?>
 <!--home page-->
 <section class="main">
     <div class="main__container">
@@ -72,6 +48,46 @@
         </div>
     </div>
 </section>
+
+<!-- Apartments Listing Section -->
+<section class="apartments__section" id="apartments">
+    <div class="apartments__container">
+        <h2 class="apartments__title">Our Apartments</h2>
+        <div class="apartments__cards">
+            <div class="apartment__card">
+                <img src="assets/ap1.png" alt="Apartment 1" class="apartment__image">
+                <h3 class="apartment__name">Sea View Deluxe</h3>
+                <p class="apartment__description">Spacious 2-bedroom apartment with a stunning sea view. Fully furnished and perfect for families.</p>
+                <button class="apartment__button">Book Now</button>
+            </div>
+            <div class="apartment__card">
+                <img src="assets/ap2.png" alt="Apartment 2" class="apartment__image">
+                <h3 class="apartment__name">Cozy Beachfront Studio</h3>
+                <p class="apartment__description">Modern studio apartment steps away from the beach. Ideal for couples or solo travelers.</p>
+                <button class="apartment__button">Book Now</button>
+            </div>
+            <div class="apartment__card">
+                <img src="assets/ap3.png" alt="Apartment 3" class="apartment__image">
+                <h3 class="apartment__name">Luxury Penthouse</h3>
+                <p class="apartment__description">Top-floor penthouse with panoramic sea views and premium amenities. Perfect for a lavish stay.</p>
+                <button class="apartment__button">Book Now</button>
+            </div>
+                <div class="apartment__card">
+                    <img src="assets/ap4.png" alt="Apartment 3" class="apartment__image">
+                    <h3 class="apartment__name">Luxury Penthouse</h3>
+                    <p class="apartment__description">Top-floor penthouse with panoramic sea views and premium amenities. Perfect for a lavish stay.</p>
+                    <button class="apartment__button">Book Now</button>
+                </div>
+                <div class="apartment__card">
+                    <img src="assets/ap5.png" alt="Apartment 3" class="apartment__image">
+                    <h3 class="apartment__name">Luxury Penthouse</h3>
+                    <p class="apartment__description">Top-floor penthouse with panoramic sea views and premium amenities. Perfect for a lavish stay.</p>
+                    <button class="apartment__button">Book Now</button>
+                </div>
+        </div>
+    </div>
+</section>
+
 
 
 <script src="app.js"></script>

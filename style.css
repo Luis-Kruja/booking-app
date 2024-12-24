@@ -219,6 +219,10 @@
     background-clip: text;
     color: transparent;
 }
+
+.main__content h1, h2{
+
+}
 @media screen and (max-width: 1100px) {
     .main__container {
         display: grid;
@@ -319,3 +323,145 @@
         margin-left: 120px;
     }
 }
+
+.apartments__section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.apartments__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #7AACAD;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.apartments__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+    margin: 0 auto;
+}
+
+.apartment__card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apartment__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.apartment__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.apartment__name {
+    font-size: 1.5rem;
+    color: #7AACAD;
+    margin: 15px 0;
+}
+
+.apartment__description {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.apartment__button {
+    background-color: #7AACAD;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.apartment__button:hover {
+    background-color: #5d8b8d;
+}
+
+
+
+.apartment__details {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.apartment__header {
+    text-align: center;
+    color: #7AACAD;
+    margin-bottom: 30px;
+}
+
+.apartment__images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.apartment__image {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apartment__booking, .apartment__reviews {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking__form label, .review__form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #7AACAD;
+}
+
+.booking__form input, .review__form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.apartment__button {
+    background-color: #7AACAD;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.apartment__button:hover {
+    background-color: #5d8b8d;
+}
+

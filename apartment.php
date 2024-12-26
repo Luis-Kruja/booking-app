@@ -4,7 +4,7 @@ $apartments = [
     1 => [
         "name" => "Sea View Deluxe",
         "description" => "Spacious 2-bedroom apartment with a stunning sea view. Fully furnished and perfect for families.",
-        "images" => ["assets/apartment1.jpg", "assets/apartment1_2.jpg", "assets/apartment1_3.jpg"],
+        "images" => ["assets/apartment1/photo1.jpg","assets/apartment1/photo2.jpg","assets/apartment1/photo3.jpg","assets/apartment1/photo4.jpg","assets/apartment1/photo5.jpg"],
         "price" => "$150 per night"
     ],
     2 => [
@@ -47,6 +47,7 @@ $apartment = $apartments[$apartmentId];
     </div>
 
     <!-- Apartment Images -->
+
     <div class="apartment__images">
         <?php foreach ($apartment['images'] as $image): ?>
             <img src="<?php echo $image; ?>" alt="Image of <?php echo $apartment['name']; ?>" class="apartment__image">

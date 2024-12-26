@@ -14,7 +14,7 @@
                 <a href="#about" class="navbar__links" id="about-page">About us</a>
             </li>
             <li class="navbar__item">
-                <a href="#services" class="navbar__links" id="services-page">Apartments</a>
+                <a href="#apartments" class="navbar__links" id="services-page">Apartments</a>
             </li>
             <li class="navbar__btn">
                 <a href="#sign-up" class="button" id="signup">Sign Up</a>

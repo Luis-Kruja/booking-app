@@ -7,6 +7,8 @@
     scroll-behavior: smooth;
 }
 
+
+
 .navbar {
     background: #7AACAD;
     height: 80px;
@@ -72,7 +74,7 @@
     width: 100%;
 }
 
-.button {
+.nav__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +90,7 @@
     transition: all 0.3s ease;
 }
 
-.navbar__btn .button:hover {
+.navbar__btn .nav__button:hover {
     color: #dcaa8b; 
     border-color: #dcaa8b;
     background: #7AACAD; 
@@ -394,7 +396,6 @@
     top:0;
     left:0;
     position: absolute;
-    background: absolute;
     background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
@@ -413,25 +414,25 @@
     background-position: center;
 }
 .apartment__card--cozy-beachfront {
-    background-image: url('assets/apartment1/photo1.jpg');
+    background-image: url('assets/apartment2/photo1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.apartment__card--One-room-apartment {
+    background-image: url('assets/apartment3/photo2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.apartment__card--Lovebirds-apartment {
+    background-image: url('assets/apartment4/photo1.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .apartment__card--luxury-penthouse {
-    background-image: url('assets/apartment1/photo3.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.apartment__card--luxury-penthouse2 {
-    background-image: url('assets/apartment1/photo4.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.apartment__card--luxury-penthouse3 {
-    background-image: url('assets/apartment1/photo5.jpg');
+    background-image: url('assets/apartment5/photo4.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -443,6 +444,7 @@
 
 .apartment__image {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -475,7 +477,7 @@
     background-color: #5d8b8d;
 }
 
-
+/*here is the css for the apartment.php file*/
 
 .apartment__details {
     padding: 40px 20px;
@@ -490,21 +492,8 @@
     margin-bottom: 30px;
 }
 
-.apartment__images {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-/*.apartment__image {
-    width: 30%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}*/
-
-.apartment__booking, .apartment__reviews {
+/*booking section*/
+.apartment__booking {
     margin-top: 30px;
     padding: 20px;
     background-color: #fff;
@@ -513,19 +502,96 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.booking__form label, .review__form label {
+
+.booking__form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.booking__form input:not(:placeholder-shown)~label{
+    top:-3em;
+    color:#7AACAD;
+    font-size:15px;
+}
+
+
+/* images shown in a carousel design*/
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel__inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel__image {
+    width: 600px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.carousel__button--prev {
+    left: 10px;
+}
+
+.carousel__button--next {
+    right: 10px;
+}
+
+.carousel__button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.apartment__reviews {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review__form label {
     display: block;
     margin-bottom: 10px;
     color: #7AACAD;
 }
 
-.booking__form input, .review__form textarea {
+.review__form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+
 
 .apartment__button {
     background-color: #7AACAD;
@@ -539,12 +605,16 @@
 }
 
 .apartment__button:hover {
+    color: #ffffff;
     background-color: #5d8b8d;
 }
+
+/*footer design*/
 
 body {
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
 
 /* {
@@ -694,7 +764,6 @@ ul {
     margin: 0;
 }
 
-add this to my css 
 
 body,html{
     margin: 0;
@@ -702,13 +771,13 @@ body,html{
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
+
 }
 .Section_top{
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
-    background-image: url(images/image.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -742,4 +811,170 @@ body,html{
 .content a:hover{
     background: #034e88;
     color: #fff;
+}
+
+/* register css */
+
+
+.register{
+    background: #bfe2e3;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"poppins",sans-serif;
+}
+
+.container__register{
+    background:#fff;
+    width:450px;
+    padding:1.5rem;
+    margin:50px auto;
+    border-radius:10px;
+    box-shadow:0 20px 35px rgba(0,0,1,0.9);
+    color: #7AACAD;
+}
+
+
+form{
+    margin:0 2rem;
+}
+.form-title{
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+    padding:1.3rem;
+    margin-bottom:0.4rem;
+}
+input{
+    color:inherit;
+    width:100%;
+    background-color:transparent;
+    border:none;
+    border-bottom:1px solid #757575;
+    padding-bottom: 3px;
+    padding-left:1.5rem;
+    font-size:15px;
+}
+.input-group{
+    padding:1% 0;
+    position:relative;
+
+}
+.input-group i{
+    position:absolute;
+    color:#7AACAD;
+}
+input:focus{
+    background-color: transparent;
+    outline:transparent;
+    border-bottom:2px solid hsl(327,90%,28%);
+}
+input::placeholder{
+    color:transparent;
+}
+label{
+    color:#757575;
+    position:relative;
+    left:1.2em;
+    top:-1.3em;
+    cursor:auto;
+    transition:0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top:-3em;
+    color:#7AACAD;
+    font-size:15px;
+}
+
+.input-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    accent-color: #7AACAD;
+
+}
+
+.input-group label[for="remember_me"] {
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+    font-size: 15px;
+    color: #757575;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.input-group input[type="checkbox"]:hover + label {
+    color: hsl(327, 90%, 28%);
+}
+
+
+.recover{
+    text-align:right;
+    font-size:1rem;
+    margin-bottom:1rem;
+
+}
+.recover a{
+    text-decoration:none;
+    color:#7AACAD;
+}
+.recover a:hover{
+    color:#5f8a8b;
+    text-decoration:underline;
+}
+.btn{
+    font-size:1.1rem;
+    padding:8px 0;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    width:100%;
+    background:#7AACAD;
+    color:white;
+    cursor:pointer;
+    transition:0.9s;
+}
+.btn:hover{
+    background:#07001f;
+}
+.or{
+    font-size:1.1rem;
+    margin-top:0.5rem;
+    text-align:center;
+}
+.icons{
+    text-align:center;
+}
+.icons i{
+    color:#7AACAD;
+    padding:0.8rem 1.5rem;
+    border-radius:10px;
+    font-size:1.5rem;
+    cursor:pointer;
+    border:2px solid #dfe9f5;
+    margin:0 15px;
+    transition:1s;
+}
+.icons i:hover{
+    background:#07001f;
+    font-size:1.6rem;
+    border:2px solid rgb(125,125,235);
+}
+.links{
+    display:flex;
+    justify-content:space-around;
+    padding:0 4rem;
+    margin-top:0.9rem;
+    font-weight:bold;
+}
+button{
+    color:#7AACAD;
+    border:none;
+    background-color:transparent;
+    font-size:1rem;
+    font-weight:bold;
+}
+button:hover{
+    text-decoration:underline;
+    color:#5f8a8b;
 }

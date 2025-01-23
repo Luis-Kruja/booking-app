@@ -16,9 +16,23 @@
             <li class="navbar__item">
                 <a href="#apartments" class="navbar__links" id="services-page">Apartments</a>
             </li>
-            <li class="navbar__btn">
-                <a href="#sign-up" class="button" id="signup">Sign Up</a>
-            </li>
+
+            <?php
+            if (!isset($_SESSION['email'])) {
+                ?>
+                <li class="navbar__btn">
+                    <a href="register.html" class="nav__button" id="signup">Sign Up</a>
+                </li>
+                <?php
+            } else{
+                ?>
+                <li class="navbar__btn">
+                    <a href="logout.php" class="nav__button" id="signOut">Sign Out</a>
+                </li>
+            <?php
+            }
+            ?>
+
         </ul>
     </div>
 </nav>

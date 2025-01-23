@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['email']) && !isset($_SESSION['step'])) {
+    header('Location: login.php');
+}
+
+if (isset($_SESSION['email']) && isset($_SESSION['step'])) {
+    header('Location: verifyEmail.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +21,9 @@
           crossorigin="anonymous"/>
 </head>
 <body>
+
+<div id="web">
+
 <!-- Navbar Section -->
 <?php include 'includes/navbar.php'; ?>
 
@@ -60,35 +74,35 @@
                 <div class="apartment__text">
                     <h3 class="apartment__name">Sea View Deluxe</h3>
                     <p class="apartment__description">Spacious 2-bedroom apartment with a stunning sea view. Fully furnished and perfect for families.</p>
-                    <button class="apartment__button">Book Now</button>
+                    <a href="apartment.php?id=1" class="apartment__button">Book Now</a>
                 </div>
             </div>
             <div class="apartment__card apartment__card--cozy-beachfront">
                 <div class="apartment__text">
                     <h3 class="apartment__name">Cozy Beachfront Studio</h3>
                     <p class="apartment__description">Modern studio apartment steps away from the beach. Ideal for couples or solo travelers.</p>
-                    <button class="apartment__button">Book Now</button>
+                    <a href="apartment.php?id=2" class="apartment__button">Book Now</a>
+                </div>
+            </div>
+            <div class="apartment__card apartment__card--One-room-apartment">
+                <div class="apartment__text">
+                    <h3 class="apartment__name">One room apartment</h3>
+                    <p class="apartment__description">Perfect view and commodity for a lovely couple.</p>
+                    <a href="apartment.php?id=3" class="apartment__button">Book Now</a>
+                </div>
+            </div>
+            <div class="apartment__card apartment__card--Lovebirds-apartment">
+                <div class="apartment__text">
+                    <h3 class="apartment__name">Lovebirds apartment</h3>
+                    <p class="apartment__description">An apartment with everything that you need to make your stay comfortable and enjoyable.</p>
+                    <a href="apartment.php?id=4" class="apartment__button">Book Now</a>
                 </div>
             </div>
             <div class="apartment__card apartment__card--luxury-penthouse">
                 <div class="apartment__text">
                     <h3 class="apartment__name">Luxury Penthouse</h3>
                     <p class="apartment__description">Top-floor penthouse with panoramic sea views and premium amenities. Perfect for a lavish stay.</p>
-                    <button class="apartment__button">Book Now</button>
-                </div>
-            </div>
-            <div class="apartment__card apartment__card--luxury-penthouse2">
-                <div class="apartment__text">
-                    <h3 class="apartment__name">Luxury Penthouse</h3>
-                    <p class="apartment__description">Top-floor penthouse with panoramic sea views and premium amenities. Perfect for a lavish stay.</p>
-                    <button class="apartment__button">Book Now</button>
-                </div>
-            </div>
-            <div class="apartment__card apartment__card--luxury-penthouse3">
-                <div class="apartment__text">
-                    <h3 class="apartment__name">Luxury Penthouse</h3>
-                    <p class="apartment__description">Top-floor penthouse with panoramic sea views and premium amenities. Perfect for a lavish stay.</p>
-                    <button class="apartment__button">Book Now</button>
+                    <a href="apartment.php?id=5" class="apartment__button" >Book Now</a>
                 </div>
             </div>
         </div>
@@ -96,7 +110,8 @@
 </section>
 <!-- Footer Section -->
 <?php include 'includes/footer.php'; ?>
-
+</div>
 <script src="app.js"></script>
+
 </body>
 </html>
